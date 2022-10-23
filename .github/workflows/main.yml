@@ -14,7 +14,7 @@ jobs:
           local-dir: ./
           state-name: .htsync
           server: ssh.juzoyena.cc
-          port: 21
+          port: 22
           username: admin
           password: ${{ secrets.FTP_PASSWORD }}
        
