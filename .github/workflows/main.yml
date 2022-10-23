@@ -1,0 +1,20 @@
+name: Upload to FTP
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          local-dir: ./
+          state-name: .htsync
+          server: ssh.juzoyena.cc
+          port: 21
+          username: admin
+          password: ${{ secrets.FTP_PASSWORD }}
+       
