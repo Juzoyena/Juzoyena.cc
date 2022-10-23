@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800;900&display=swap");
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/images/bg_juzochar.png);
+    background-position: center;
+  }
+.message {
+    font-family: "Poppins";
+    text-shadow: 5px 5px 5px black;
+    color: #ffffff;
+    position: relative;
+    top: -200px;    
+}
