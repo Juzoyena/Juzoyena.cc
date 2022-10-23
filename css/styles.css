@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/images/bg_pattern_orange.png);
+}
+body::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(1, 43, 255) 34%,rgb(255, 68, 0));
+    clip-path: circle(25% at right 70%);
+}
+body::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 76%;
+    height: 76%;
+    background: linear-gradient(40deg, rgb(255, 0, 255) 0%,35%, rgb(255, 145, 0));
+    clip-path: circle(23% at 10% 10%);
+}
+.button
+{
+  --border-right: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --animation-color: #ffffff;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Poppins";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.container .card
+{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+.container .card .content
+{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(10px);
+    opacity: 10;
+    transition: 0.5s;
+}
+.container .card:hover .content
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.container .card .content h2
+{
+    position: absolute;
+    top: -60px;
+    right: 10px;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+.container .card .content h3
+{
+    font-size: 1.8em;
+    font-family: 'Poppins';
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+}
+.container .card .content 
+{
+    font-size: 1em;
+    font-family: 'Poppins';
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+.container .card .content
+{
+    position: 100px 200px;
+}
+.container .card .content .hyenag
+{
+    padding: 0;
+    border-radius: 100px;
+    height: auto;
+    max-width: 100%;
+    margin: auto;
+    margin-top: auto;
+    opacity: 0.25;
+}
+.twitterlogo
+{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    opacity: 0.5;
+}
+.twitchlogo
+{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    opacity: 0.5;
+}
+.youtubelogo
+{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    opacity: 0.5;
+}
+.deviantlogo
+{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    opacity: 0.5;
+}
+.discordlogo
+{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    opacity: 0.5;
+}

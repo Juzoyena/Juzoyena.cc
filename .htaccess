@@ -1,0 +1,15 @@
+Options -Indexes
+ErrorDocument 404 /error_404.html
+
+<IfModule mod_rewrite.c>
+        RewriteEngine on
+        RewriteBase /
+
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME}.html -f
+        RewriteRule !.*\.html$ %{REQUEST_FILENAME}.html [QSA,L]
+
+        RewriteCond %{REQUEST_FILENAME}.php -f
+        RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
+</IfModule>
