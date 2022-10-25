@@ -21,26 +21,54 @@ body {
   background-image: url(/images/bg_juzochar.png);
   background-position: center;
 }
+iframe {
+  position: absolute;
+  align-items: center;
+  top: 77%;
+  right: 95px;
+  box-shadow: 20px 20px 20px black;
+  border-radius: 20px;
+}
+.placeholderbox {
+  position: absolute;
+  background-color: rgba(147, 147, 147, 0.606);
+  width: 895px;
+  height: 480px;
+  align-items: center;
+  top: 77%;
+  left: 105px;
+  box-shadow: 20px 20px 20px black;
+  border-radius: 20px;
+}
+.placeholdertext {
+  font-family: "Poppins";
+  font-size: 2em;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.488);
+}
 .headersven {
     position: absolute;
     max-width: 35%;
     max-height: 100%;
+    align-items: center;
     height: auto;
-    left: 110px;
+    right: 105px;
     border-radius: 20px;
     box-shadow: 10px 10px 10px black;
 }
 .headerjuzo {
     position: absolute;
+    align-items: center;
     max-width: 35%;
     max-height: 100%;
     height: auto;
-    right: 110px;
+    left: 105px;
     border-radius: 20px;
     box-shadow: 10px 10px 10px black;
 }
 
 .bg-image {
+  position: fixed;
   background-repeat: repeat;
   background-size: cover;
   box-shadow: 5px 5px 10px;
