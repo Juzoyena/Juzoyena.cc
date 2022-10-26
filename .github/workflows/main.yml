@@ -12,10 +12,10 @@ jobs:
       - uses: SamKirkland/FTP-Deploy-Action@4.3.2
         with:
           local-dir: ./public/
-          server-dir: /var/www/juzoyena.cc/
+          server-dir: ./juzoyena.cc/
           state-name: .htsync
-          server: ssh.juzoyena.cc
-          port: 22
-          username: admin
+          server: sl203.web.hostpoint.ch
+          port: 21
+          username: git@juzoyena.cc
           password: ${{ secrets.FTP_PASSWORD }}
       
