@@ -22,3 +22,11 @@ body
     transform: translate(-50%, -50%);
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
 }
+.tubetainer {
+    display: flex;
+}
+.youtubevid {
+    order: 1;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black;
+}
