@@ -47,13 +47,13 @@ body {
 }
 .youtubevid {
   order: 3;
-  background-color: rgba(147, 147, 147, 0.0);
   width: 895px;
   height: 480px;
   margin-top: 150px;
   border-radius: 20px;
+  box-shadow: 20px 20px 20px black;
 }
-iframe {
+.twitchvod {
   order: 4;
   box-shadow: 20px 20px 20px black;
   border-radius: 20px;
