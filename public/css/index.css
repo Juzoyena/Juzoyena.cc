@@ -1,17 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800;900&display=swap");
 
-.maintitle
-{
-    color: white;
-    font-family: "Poppins";
-    font-size: 100px;
-    margin: 0;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+.maintitle {
+  color: white;
+  font-family: "Poppins";
+  font-size: 100px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
 }
 body {
   display: flex;
@@ -21,50 +19,52 @@ body {
   background-image: url(/images/bg_juzochar.png);
   background-position: center;
 }
-iframe {
-  position: absolute;
-  align-items: center;
-  top: 77%;
-  right: 95px;
-  box-shadow: 20px 20px 20px black;
+.containerimg {
+  padding: 50px;
+  margin-top: 520px;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  justify-content: space-between;
+}
+.headerjuzo {
+  order: 1;
+  width: 850px;
+  height: 100%;
+  margin-left: 48px;
   border-radius: 20px;
+  box-shadow: 10px 10px 10px black;
+}
+.headersven {
+  order: 2;
+  width: 850px;
+  height: 100%;
+  margin-right: 48px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px black;
 }
 .placeholderbox {
-  position: absolute;
+  order: 3;
   background-color: rgba(147, 147, 147, 0.606);
   width: 895px;
   height: 480px;
-  align-items: center;
-  top: 77%;
-  left: 105px;
+  margin-top: 150px;
   box-shadow: 20px 20px 20px black;
   border-radius: 20px;
+}
+iframe {
+  order: 4;
+  box-shadow: 20px 20px 20px black;
+  border-radius: 20px;
+  margin-top: 150px;
 }
 .placeholdertext {
   font-family: "Poppins";
   font-size: 2em;
   text-align: center;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.488);
-}
-.headersven {
-    position: absolute;
-    max-width: 35%;
-    max-height: 100%;
-    align-items: center;
-    height: auto;
-    right: 105px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 10px black;
-}
-.headerjuzo {
-    position: absolute;
-    align-items: center;
-    max-width: 35%;
-    max-height: 100%;
-    height: auto;
-    left: 105px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 10px black;
 }
 
 .bg-image {
@@ -172,9 +172,8 @@ iframe {
   margin-top: auto;
   opacity: 0.25;
 }
-.provlogo
-{
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 50px;
-    opacity: 0.8;
+.provlogo {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  opacity: 0.8;
 }
