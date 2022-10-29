@@ -5,11 +5,12 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(/images/bg_juzochar.png);
+  background-image: url(/images/bwbackgroundv2.png);
   background-position: center;
 }
 .h1container {
   display: flex;
+  position: absolute;
   margin-bottom: 700px;
   align-items: center;
   justify-content: center;
@@ -20,33 +21,76 @@ body {
   order: 1;
   color: white;
   font-family: "Poppins";
-  font-size: 120px;
+  font-size: 200px;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
   margin-left: 1px;
 }
 .container {
   display: grid;
+  height: 100px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
+  gap: 50px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "Rainbow-six-siege"
     "Call-of-Duty"
-    "Kovaaks"
-    "Valorant";
+    "Valorant"
+    "Kovaaks";
 }
-.Kovaaks {
-  grid-area: Kovaaks;
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #0000009d;
+}
+.r6banner:hover .overlay {
+  opacity: 1;
+}
+.overlaytext {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 .Rainbow-six-siege {
   grid-area: Rainbow-six-siege;
 }
-
 .Call-of-Duty {
   grid-area: Call-of-Duty;
 }
-
 .Valorant {
   grid-area: Valorant;
 }
+.Kovaaks {
+  grid-area: Kovaaks;
+}
+.r6banner {
+  display: flex;
+  height: 650px;
+  border: 1px solid white;
+}
+.codbanner {
+  display: flex;
+  height: 650px;
+}
+.valbanner {
+  display: flex;
+  height: 650px;
+}
+.kvbanner {
+  display: flex;
+  height: 650px;
+}
+
