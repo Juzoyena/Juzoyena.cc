@@ -53,17 +53,24 @@ body {
 .r6banner {
   display: flex;
   height: 650px;
+  border: 1px solid white;
+  border-radius: 50px;
 }
 .codbanner {
   display: flex;
   height: 650px;
+  border: 1px solid white;
+  border-radius: 50px;
 }
 .valbanner {
   display: flex;
   height: 650px;
+  border: 1px solid white;
+  border-radius: 50px;
 }
 .kvbanner {
   display: flex;
   height: 650px;
+  border: 1px solid white;
+  border-radius: 50px;
 }
-
