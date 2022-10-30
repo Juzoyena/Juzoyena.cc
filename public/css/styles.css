@@ -1,140 +1,112 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800;900&display=swap");
+/* @import url("/css/reset.css"); */
+
+/*
+  General basics
+*/
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+}
+html {
+  --font-color: #fff;
+
+  --color-youtube: rgb(194, 20, 20);
+  --color-twitch: rgb(174, 0, 255);
+
+  --card-background: #181818;
+  --card-text-stroke-color: #ffffff99;
 }
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-image: url(/images/bwbackgroundv2.png);
   background-position: center;
+  font-family: "Poppins", sans-serif;
 }
-.button {
-  --border-right: 6px;
-  --text-stroke-color: rgba(255, 255, 255, 0.6);
-  --animation-color: #ffffff;
-  --fs-size: 2em;
-  letter-spacing: 3px;
+a:link,
+a:visited {
+  color: var(--font-color);
   text-decoration: none;
-  font-size: var(--fs-size);
-  font-family: "Poppins";
-  position: relative;
-  text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--text-stroke-color);
-}
-.hover-text {
-  position: absolute;
-  box-sizing: border-box;
-  content: attr(data-text);
-  color: var(--animation-color);
-  width: 0%;
-  inset: 0;
-  border-right: var(--border-right) solid var(--animation-color);
-  overflow: hidden;
-  transition: 0.5s;
-  -webkit-text-stroke: 1px var(--animation-color);
-}
-.button:hover .hover-text {
-  width: 100%;
-  filter: drop-shadow(0 0 23px var(--animation-color));
-}
-.container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  flex-wrap: wrap;
-  z-index: 1;
-}
-.container .card {
-  position: relative;
-  width: 280px;
-  height: 400px;
-  margin: 30px;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
-}
-.container .card .content {
-  padding: 20px;
-  text-align: center;
-  transform: translateY(10px);
-  opacity: 10;
-  transition: 0.5s;
-}
-.container .card:hover .content {
-  transform: translateY(0px);
-  opacity: 1;
-}
-.container .card .content h2 {
-  position: absolute;
-  top: -60px;
-  right: 10px;
-  font-size: 8em;
-  color: rgba(255, 255, 255, 0.05);
-  pointer-events: none;
-}
-.container .card .content h3 {
-  font-size: 1.8em;
-  font-family: "Poppins";
-  color: rgb(255, 255, 255);
-  z-index: 1;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
-}
-.container .card .content {
-  font-size: 1em;
-  font-family: "Poppins";
-  color: rgb(255, 255, 255);
-  font-weight: 300;
 }
 
-.container .card .content {
-  position: 100px 200px;
+
+/*
+  Classes
+*/
+.page-title {
+  color: var(--font-color);
+  font-size: 120px;
+  margin: 80px 0;
+  text-align: center;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
 }
-.container .card .content .hyenag {
-  padding: 0;
-  border-radius: 100px;
-  height: auto;
-  max-width: 100%;
-  margin: auto;
-  margin-top: auto;
-  opacity: 0.25;
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
 }
-.twitterlogo {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+
+/* Start of link card */
+.link-card {
+  --card-box-shadow: 252, 248, 248;
+  align-items: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.link-card__wrapper {
+  align-items: center;
+  background-color: var(--card-background);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 32px;
+  transition: all 0.3s;
+}
+.link-card__icon {
+  background-color: #181614;
   border-radius: 50px;
-  opacity: 0.5;
-}
-.twitchlogo {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 50px;
-  opacity: 0.5;
+  height: 200px;
+  padding: 20px;
+  width: 200px;
 }
-.youtubelogo {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 50px;
-  opacity: 0.5;
+.link-card__text-wrapper {
+  color: transparent;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin-top: 32px;
+  position: relative;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px var(--card-text-stroke-color);
 }
-.deviantlogo {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 50px;
-  opacity: 0.5;
+.link-card__text-revealed {
+  position: absolute;
+  box-sizing: border-box;
+  color: rgb(var(--card-box-shadow));
+  width: 0%;
+  inset: 0;
+  border-right: 6px solid rgb(var(--card-box-shadow));
+  overflow: hidden;
+  transition: 500ms;
+  -webkit-text-stroke: 1px rgb(var(--card-box-shadow));
 }
-.discordlogo {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 50px;
-  opacity: 0.5;
+
+
+.link-card:hover {
+  background: linear-gradient(163deg, #ffffff 0%, #ffffff1e 100%);
+  box-shadow: 0px 0px 30px 1px rgba(var(--card-box-shadow), .4);
+  transform: translateY(-5px);
 }
+.link-card:hover .link-card__wrapper {
+  transform: scale(.98);
+}
+.link-card:hover .link-card__text-revealed {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--card-text-stroke-color))
+}
+/* End of of link card */

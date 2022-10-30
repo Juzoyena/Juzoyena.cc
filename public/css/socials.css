@@ -1,0 +1,28 @@
+body {
+  background-image: url(/images/bwbackgroundv2.png);
+}
+
+.socials-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.link-card.--card-twitter:hover {
+  --card-box-shadow: 0, 172, 238;
+}
+
+.link-card.--card-twitch:hover {
+  --card-box-shadow: 100, 65, 165;
+}
+
+.link-card.--card-youtube:hover {
+  --card-box-shadow: 255, 0, 0;
+}
+.link-card.--card-discord:hover {
+  --card-box-shadow: 88, 101, 242;
+}
+.link-card.--card-deviantart:hover {
+  --card-box-shadow: 0, 209, 89;
+}
