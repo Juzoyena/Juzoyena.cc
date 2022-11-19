@@ -34,10 +34,26 @@ a:visited {
 */
 .page-title {
   color: var(--font-color);
-  font-size: 120px;
+  font-size: 5vw;
   margin: 80px 0;
   text-align: center;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+}
+
+/* 
+Media 
+*/
+
+@media screen and (max-width: 600px) {
+  .page-title {
+    font-size: 66px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .page-title {
+    font-size: 110px;
+  }
 }
 
 .container {
@@ -67,7 +83,7 @@ a:visited {
   transition: all 0.3s;
 }
 .link-card__icon {
-  background-color: #181614;
+  background-color: #1a1919;
   border-radius: 50px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   height: 200px;
@@ -82,7 +98,7 @@ a:visited {
   margin-top: 32px;
   position: relative;
   text-transform: uppercase;
-  -webkit-text-stroke: 1px var(--card-text-stroke-color);
+  -webkit-text-stroke: 0.4px var(--card-text-stroke-color);
 }
 .link-card__text-revealed {
   position: absolute;
@@ -109,4 +125,4 @@ a:visited {
   width: 100%;
   filter: drop-shadow(0 0 23px var(--card-text-stroke-color))
 }
-/* End of of link card */
+
