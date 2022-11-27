@@ -14,7 +14,7 @@ jobs:
           local-dir: ./public/
           server-dir: ./juzoyena.cc/
           state-name: .htsync
-          server: sl203.web.hostpoint.ch
+          server: sl1071.web.hostpoint.ch
           port: 21
           username: git@juzoyena.cc
           password: ${{ secrets.FTP_PASSWORD }}
